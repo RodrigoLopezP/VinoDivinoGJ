@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvuefd53vf3g3"]
+
+[ext_resource type="Script" uid="uid://d3bphpq57nbh1" path="res://scripts/dialogue_scene.gd" id="1_cno1m"]
+
+[node name="DialogueScene" type="Node2D"]
+script = ExtResource("1_cno1m")
+
+[node name="CustomerName" type="Label" parent="."]
+offset_left = 63.0
+offset_top = 69.0
+offset_right = 577.0
+offset_bottom = 243.0
+scale = Vector2(1, 0.991686)
+theme_override_font_sizes/font_size = 50
+text = "CustomerName"
+
+[node name="CustomerLine" type="Label" parent="."]
+offset_left = 81.0
+offset_top = 194.0
+offset_right = 419.0
+offset_bottom = 263.0
+theme_override_font_sizes/font_size = 50
+text = "CustomerLine"
+
+[node name="Answer1" type="Label" parent="CustomerLine"]
+offset_left = 70.0
+offset_top = 130.0
+offset_right = 279.0
+offset_bottom = 199.0
+theme_override_font_sizes/font_size = 50
+text = "Answer1"
+
+[node name="Answer2" type="Label" parent="CustomerLine"]
+offset_left = 64.0
+offset_top = 231.0
+offset_right = 273.0
+offset_bottom = 300.0
+theme_override_font_sizes/font_size = 50
+text = "Answer2"
+
+[node name="Answer3" type="Label" parent="CustomerLine"]
+offset_left = 63.0
+offset_top = 326.0
+offset_right = 272.0
+offset_bottom = 395.0
+theme_override_font_sizes/font_size = 50
+text = "Answer3"
+
+[node name="WineDescription" type="Label" parent="."]
+offset_left = 816.0
+offset_top = 133.0
+offset_right = 1203.0
+offset_bottom = 308.0
+theme_override_font_sizes/font_size = 50
+text = "WineList"

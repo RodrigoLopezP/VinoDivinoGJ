@@ -1,0 +1,24 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Mario",
+      "surname": "Rossi"
+    },
+    {
+      "id": 2,
+      "name": "Luigi",
+      "surname": "Verdi"
+    },
+    {
+      "id": 3,
+      "name": "Alessio",
+      "surname": "Poggibonsi"
+    },
+    {
+      "id": 4,
+      "name": "Viola",
+      "surname": "Basiliani"
+    }
+  ]
+}

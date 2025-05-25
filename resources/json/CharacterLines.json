@@ -1,0 +1,55 @@
+{
+	"CharacterLines": [
+		{
+			"id": 1.0,
+			"characterid": 1.0,
+			"line": "Ciao, come stai?",
+			"flags": [
+				"intro",
+				"friendly"
+			],
+			"answers": [
+				{
+					"line": "Tutto bene, te?",
+					"IdNextLine": 2.0,
+					"Requiredflags": [
+						"flag1",
+						"flag2"
+					]
+				},
+				{
+					"line": "Tutto male, te?",
+					"IdNextLine": 2.0,
+					"Requiredflags": [
+						"flag1",
+						"flag2"
+					]
+				},
+				{
+					"line": "Lore ipsum",
+					"IdNextLine": 2.0,
+					"Requiredflags": [
+						"flag1",
+						"flag2"
+					]
+				}
+			]
+		},
+		{
+			"id": 2.0,
+			"characterid": 2.0,
+			"line": "Dont care, dammi del vino.",
+			"flags": [
+				"warning"
+			]
+		},
+		{
+			"id": 3.0,
+			"characterid": 3.0,
+			"line": "Hai trovato qualcosa?",
+			"flags": [
+				"question"
+			]
+		}
+	]
+}

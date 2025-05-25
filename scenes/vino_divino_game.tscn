@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cro5hf3bpytp1"]
+
+[ext_resource type="Script" uid="uid://ba8t23k2cvjqw" path="res://scripts/vino_divino_game.gd" id="1_amf08"]
+[ext_resource type="Texture2D" uid="uid://0w6o4ot8rggg" path="res://resources/istockphoto-1998253253-612x612.jpg" id="1_rwrj8"]
+[ext_resource type="PackedScene" uid="uid://dvuefd53vf3g3" path="res://scenes/dialogue_scene.tscn" id="3_amf08"]
+
+[node name="VinoDivinoGame" type="Node2D"]
+script = ExtResource("1_amf08")
+
+[node name="SfondoPrincipale" type="TextureRect" parent="."]
+offset_right = 612.0
+offset_bottom = 295.0
+scale = Vector2(2.09627, 2.44657)
+texture = ExtResource("1_rwrj8")
+
+[node name="DialogueScene" parent="." instance=ExtResource("3_amf08")]
