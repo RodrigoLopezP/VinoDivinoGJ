@@ -1,15 +1,25 @@
 extends Node2D
 @onready var Answer        := preload("res://scripts/answer.gd")
+var current_customer_id: int
+var current_line_id: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
-	var customer_id = 1;
+	$CustomerLine/Answer1.connect("label_clicked", Callable(self, "_on_label_answer1_clicked"))
 	
+	var customer_id = 1;
+	var customer_line_id = 1;
+	
+	set_dialogue_scenario(customer_id, customer_line_id)
+	
+	pass # Replace with function body.
+
+func set_dialogue_scenario(customer_id:int, customer_line_id:int) -> void:
 	var customer_name = get_customer_name(customer_id)
 	$CustomerName.text = customer_name
 	
-	var customer_line = get_customer_line(customer_id)
+	var customer_line = get_customer_line(customer_line_id)
 	$CustomerLine.text= customer_line
 	
 	var wine_list = get_wine_description(1)
@@ -20,16 +30,22 @@ func _ready() -> void:
 	var ansObj: Array[Answer] = answers_raw as Array[Answer]
 	
 	set_multiple_answers(ansObj)
-	#var ans = AnswerClass.new();
 	
-	pass # Replace with function body.
+	current_line_id = customer_line_id
+	current_customer_id = customer_id
+	pass
 
 func set_multiple_answers(answers) -> void:
 	print("Setting multiple answers for the line")
 	
 	$CustomerLine/Answer1.text = answers[0].line
+	#$CustomerLine/Answer1.next_line_id= answers[0].id_next_line
+	
 	$CustomerLine/Answer2.text = answers[1].line
+	#$CustomerLine/Answer2.next_line_id= answers[1].id_next_line
+	
 	$CustomerLine/Answer3.text = answers[2].line
+	#$CustomerLine/Answer3.next_line_id= answers[2].id_next_line
 	
 	pass
 
@@ -115,5 +131,8 @@ func get_customer_line(customer_line_id:int):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func _on_label_answer1_clicked():
+	print("Answer 1 clicked")
 	
-	
+	var label: Label
